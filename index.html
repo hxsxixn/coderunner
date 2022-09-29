@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <title>Document</title>
+</head> 
+<body>
+    <header>
+        <div class="container-fluid d-flex" id="header">
+            <h3 class="me-auto">CODE RUNNER</h3>
+            <div class="btn-group" role="group">
+                <button class="btn btn-outline-secondary" id="sample">SAMPLE</button>
+                <button class="btn btn-outline-secondary" type="reset" id="clear">CLEAR</button>
+            </div>
+            <button class="btn btn-outline-success" id="run-btn"><span>RUN</span></button>
+            <button class="btn btn-outline-warning" id="save-btn"><span>SAVE</span></button>
+        </div>
+    </header>
+    <div class="container-fluid" id="main-content">
+        <div class="row">
+            <div class="col-md-4" id="accordion">
+                <h5>HTML</h5>
+                <div class="code-container first">
+                    <textarea id="html-code"></textarea>
+                </div>
+                <h5>CSS</h5>
+                <div class="code-container">
+                    <textarea id="css-code"></textarea>
+                </div>
+                <h5>JavaScript</h5>
+                <div class="code-container">
+                    <textarea id="js-code"></textarea>
+                </div>
+            </div>
+            <div class="col-md-8 view">
+                <iframe src="demo.html" id="result"></iframe>
+                <!-- <iframe id="result"></iframe> -->
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container-fluid" id="sec_2">
+
+        </div>
+    </section>
+
+
+
+    <script src="script/plugin/jquery-3.6.0.min.js"></script>
+    <script src="script/plugin/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="script/ui.js"></script>
+</body>
+</html>

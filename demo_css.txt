@@ -1,0 +1,34 @@
+himl, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f6af2e;
+  user-select: none;
+  overflow:hidden;
+}
+
+#cat {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+#cross {
+  position: absolute;
+}
+#cross:before, #cross:after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+}
+#cross:before {
+  transform: rotate(45deg);
+}
+#cross:after {
+  transform: rotate(315deg);
+}

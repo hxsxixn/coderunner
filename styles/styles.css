@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import url("plugin/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+#header {
+  background-color: #333;
+  padding: 10px 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#header h3 {
+  color: #eee;
+  margin-bottom: 0px;
+  line-height: 40px;
+}
+
+button.btn#run-btn {
+  font-family: 'Mukta', sans-serif;
+  width: 80px;
+  padding: 2px auto;
+  margin-right: 20px;
+}
+
+button.btn#run-btn span::after {
+  display: inline-block;
+  content: "";
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+button.btn#run-btn:hover span::after {
+  display: inline-block;
+  content: "▶";
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.btn-group {
+  margin-right: 20px;
+}
+
+#accordion {
+  background-color: #d4975f;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+#accordion h5, #accordion .code-container {
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#accordion h5 {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  background-color: #1c4c57;
+  color: #fff;
+  height: 100%;
+  margin: 0px;
+  padding-top: 8px;
+  cursor: col-resize;
+}
+
+#accordion .code-container {
+  width: 0;
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#accordion .code-container.first {
+  width: calc(100% - 100px);
+}
+
+#accordion textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  background-color: inherit;
+  border: none;
+  color: #572f1c;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-top: 15px;
+  padding-left: 8px;
+}
+
+#accordion textarea:focus-visible {
+  outline: none;
+}
+
+#accordion textarea::-moz-selection {
+  background-color: #333;
+  color: #fff;
+}
+
+#accordion textarea::selection {
+  background-color: #333;
+  color: #fff;
+}
+
+.col-md-8.view {
+  padding: 0;
+  margin: 0;
+  height: calc(100vh - 60px);
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
