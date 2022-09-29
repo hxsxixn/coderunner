@@ -70,3 +70,7 @@ codeRunner.init = function(){
     this.syncTab()
     this.eventListner();
 }
+
+$(()=>{
+    codeRunner.init();
+})
