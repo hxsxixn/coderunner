@@ -34,7 +34,7 @@ codeRunner.sample = () => {
 
 codeRunner.new = () => {
     $("#new-btn").on('click',function(){
-        jQuery.get('../single/index.html',function(data){
+        jQuery.get('./single/index.html',function(data){
             $('main').html(data);
             const swiper = new Swiper('.swiper',{
                 pagination: {el:'.swiper-pagination'},
