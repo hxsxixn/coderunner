@@ -2,6 +2,7 @@
 @import url("plugin/bootstrap.min.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import './_single-style.scss';
 
 /* width */
 ::-webkit-scrollbar {
@@ -18,7 +19,11 @@
     background: #555; 
   }
   
+main{
+    position: relative;
+    
 
+}
 #header{
     background-color: #333;
     padding: 10px 20px;
@@ -28,6 +33,10 @@
         margin-bottom: 0px;
         line-height: 40px;
     }
+}
+
+#new-btn{
+    margin-right: 20px;
 }
 
 button.btn#run-btn{
