@@ -34,8 +34,9 @@ codeRunner.sample = () => {
 
 codeRunner.new = () => {
     $("#new-btn").on('click',function(){
-        jQuery.get('./single/index.html',function(data){
-            $('main').html(data);
+        jQuery.get('./single/index.html',function(data,status){
+            alert(status);
+            $('.view').html(data);
             const swiper = new Swiper('.swiper',{
                 pagination: {el:'.swiper-pagination'},
                 loop: true,
@@ -46,7 +47,10 @@ codeRunner.new = () => {
                   disableOnInteraction: false,
                 },
               })
-              console.log('swiper init')
+              console.log('swiper init');
+              if($('.swiper').length > 0){
+                $('#app').fadeIn();
+              }
         });
     })
 }
@@ -76,6 +80,12 @@ codeRunner.run = () => {
     $("#result").contents().find("script").next("script").html(js_code);
 }
 
+codeRunner.reset = () => {
+    $('#app').fadeOut(function(){
+            $('.view').html('<iframe src="demo.html" id="result"></iframe>')
+        });
+}
+
 codeRunner.eventListner = function(){
     const self = this;
 
@@ -87,7 +97,7 @@ codeRunner.eventListner = function(){
     })
     
     $("#clear").on('click',function(){
-        $('main').text('');
+        self.reset();
         $("#html-code,#css-code,#js-code").val("");
         self.run();
     })
